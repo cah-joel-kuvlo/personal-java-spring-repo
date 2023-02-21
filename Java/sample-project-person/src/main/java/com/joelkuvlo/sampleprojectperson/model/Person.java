@@ -1,33 +1,77 @@
 package com.joelkuvlo.sampleprojectperson.model;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import java.util.ArrayList;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.validation.constraints.*;
+import java.time.LocalDate;
+@Entity
 public class Person {
-    @NotNull
-    @NotBlank
-    @Pattern(regexp="[a-zA-Z]+", message="First Name must only contain alphabetical characters")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long empId;
+
+    @Size(min = 1, max = 50, message = "First name must be between 1 and 50 characters")
+    @Pattern(regexp = "^[a-zA-Z\\s]*$", message = "First name can only contain letters and spaces")
     private String firstName;
-    private ArrayList<String> listItems;
+
+    @Size(max = 50, message = "Middle name cannot be more than 50 characters")
+    @Pattern(regexp = "^[a-zA-Z\\s]*$", message = "Middle name can only contain letters and spaces")
+    private String middleName;
+
+    @NotNull(message = "Last name cannot be null")
+    @Size(min = 1, max = 50, message = "Last name must be between 1 and 50 characters")
+    @Pattern(regexp = "^[a-zA-Z\\s]*$", message = "Last name can only contain letters and spaces")
+    private String lastName;
+
+    @NotNull(message = "Date of birth cannot be null")
+    @Past(message = "Date of birth must be in the past")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate dateOfBirth;
+
+    @NotNull(message = "Hire date cannot be null")
+    @PastOrPresent(message = "Hire date must be in the past or present")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate hireDate;
 
     public Person() {
-        this.firstName = firstName;
-        this.listItems = listItems;
     }
+
+    public Person(Long empId, String firstName, String middleName, String lastName, LocalDate dateOfBirth, LocalDate hireDate) {
+        this.empId = empId;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.hireDate = hireDate;
+    }
+
+    public Long getEmpId() {
+        return empId;
+    }
+
     public String getFirstName() {
-        return firstName;
+
+        return firstName == null ? "" : firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public String getMiddleName() {
+        return middleName;
     }
 
-    public ArrayList<String> getListItems() {
-        return listItems;
+    public String getLastName() {
+
+        return lastName == null ? "" : lastName;
     }
 
-    public void setListItems(ArrayList<String> listItems) {
-        this.listItems = listItems;
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public LocalDate getHireDate() {
+        return hireDate;
     }
 }
