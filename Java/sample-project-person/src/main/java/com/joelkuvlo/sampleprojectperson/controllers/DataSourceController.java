@@ -91,7 +91,7 @@ public class DataSourceController {
 
         model.addAttribute("person", person);
 
-        return "EditPage";
+        return "SuccessPage";
     }
 
     @PostMapping("/update/{id}")
