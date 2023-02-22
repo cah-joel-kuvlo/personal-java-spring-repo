@@ -35,7 +35,7 @@ public class DataSourceRepositoryImpl implements DataSourceRepository {
     }
 
     public List<Employee> findAll() {
-        String sql = "SELECT id as empId, first_name as firstName, middle_name as middleName, last_name as lastName, date_of_birth as dateOfBirth, hire_date as hireDate FROM dev.person";
+        String sql = "SELECT id as empId, first_name as firstName, middle_name as middleName, last_name as lastName, date_of_birth as dateOfBirth, hire_date as hireDate FROM " + tableName;
         List<Employee> employees = jdbcTemplate.query(sql, new EmployeeRowMapper());
         for (Employee employee : employees) {
             System.out.println(employee.getEmpId() + " " + employee.getFirstName() + " " + employee.getLastName());

@@ -35,7 +35,7 @@ public class DataSourceController {
     @GetMapping("/MainPage")
     public String showForm(Model model) {
         logger.info("Displaying form");
-        model.addAttribute("person", new Employee());
+        model.addAttribute("employee", new Employee());
         model.addAttribute("errorMessage", "");
         return "MainPage";
     }
