@@ -1,0 +1,2 @@
+### View records from the database
+GET http://localhost:8080/employee-web-app/view
