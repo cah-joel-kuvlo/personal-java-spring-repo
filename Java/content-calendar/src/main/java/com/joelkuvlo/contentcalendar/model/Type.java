@@ -1,2 +1,5 @@
-package com.joelkuvlo.contentcalendar.model;public enum Type {
+package com.joelkuvlo.contentcalendar.model;
+
+public enum Type {
+  ARTICLE, VIDEO, COURSE, CONFERENCE_TAK
 }

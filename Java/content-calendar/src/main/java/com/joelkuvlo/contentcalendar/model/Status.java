@@ -1,2 +1,8 @@
-package com.joelkuvlo.contentcalendar.model;public enum Status {
+package com.joelkuvlo.contentcalendar.model;
+
+public enum Status {
+  IDEA,
+  IN_PROGRESS,
+  COMPLETED,
+  PUBLISHED
 }
