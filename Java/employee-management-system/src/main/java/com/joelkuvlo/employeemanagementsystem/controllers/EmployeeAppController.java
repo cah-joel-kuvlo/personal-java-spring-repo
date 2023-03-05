@@ -1,8 +1,8 @@
-package com.joelkuvlo.sampleprojectemployee.controllers;
+package com.joelkuvlo.employeemanagementsystem.controllers;
 
-import com.joelkuvlo.sampleprojectemployee.exceptions.InvalidInputException;
-import com.joelkuvlo.sampleprojectemployee.model.Employee;
-import com.joelkuvlo.sampleprojectemployee.service.EmployeeService;
+import com.joelkuvlo.employeemanagementsystem.exceptions.InvalidInputException;
+import com.joelkuvlo.employeemanagementsystem.model.Employee;
+import com.joelkuvlo.employeemanagementsystem.service.EmployeeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

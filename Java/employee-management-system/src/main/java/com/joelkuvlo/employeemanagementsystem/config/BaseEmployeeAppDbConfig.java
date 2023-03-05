@@ -1,4 +1,4 @@
-package com.joelkuvlo.sampleprojectemployee.config;
+package com.joelkuvlo.employeemanagementsystem.config;
 
 import jakarta.persistence.EntityManagerFactory;
 import org.flywaydb.core.Flyway;
@@ -19,8 +19,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 import javax.sql.DataSource;
 import java.util.Properties;
 @Configuration
-@EnableJpaRepositories(basePackages = "com.joelkuvlo.sampleprojectemployee.repository")
-@ComponentScan(basePackages = "com.joelkuvlo.sampleprojectemployee")
+@EnableJpaRepositories(basePackages = "com.joelkuvlo.employeemanagementsystem.repository")
+@ComponentScan(basePackages = "com.joelkuvlo.employeemanagementsystem")
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class BaseEmployeeAppDbConfig {
 

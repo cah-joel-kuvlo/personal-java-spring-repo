@@ -1,8 +1,8 @@
-package com.joelkuvlo.sampleprojectemployee.service;
+package com.joelkuvlo.employeemanagementsystem.service;
 
-import com.joelkuvlo.sampleprojectemployee.exceptions.InvalidInputException;
-import com.joelkuvlo.sampleprojectemployee.model.Employee;
-import com.joelkuvlo.sampleprojectemployee.repository.EmployeeRepository;
+import com.joelkuvlo.employeemanagementsystem.exceptions.InvalidInputException;
+import com.joelkuvlo.employeemanagementsystem.model.Employee;
+import com.joelkuvlo.employeemanagementsystem.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

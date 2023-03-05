@@ -1,6 +1,6 @@
-package com.joelkuvlo.sampleprojectemployee.implementations;
+package com.joelkuvlo.employeemanagementsystem.implementations;
 
-import com.joelkuvlo.sampleprojectemployee.model.Employee;
+import com.joelkuvlo.employeemanagementsystem.model.Employee;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

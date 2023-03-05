@@ -1,4 +1,4 @@
-package com.joelkuvlo.sampleprojectemployee.config;
+package com.joelkuvlo.employeemanagementsystem.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

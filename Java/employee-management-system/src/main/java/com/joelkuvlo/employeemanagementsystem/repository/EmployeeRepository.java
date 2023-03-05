@@ -1,6 +1,6 @@
-package com.joelkuvlo.sampleprojectemployee.repository;
+package com.joelkuvlo.employeemanagementsystem.repository;
 
-import com.joelkuvlo.sampleprojectemployee.model.Employee;
+import com.joelkuvlo.employeemanagementsystem.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

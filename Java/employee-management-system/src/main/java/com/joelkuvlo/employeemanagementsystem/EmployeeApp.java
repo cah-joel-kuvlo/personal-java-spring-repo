@@ -1,6 +1,6 @@
-package com.joelkuvlo.sampleprojectemployee;
+package com.joelkuvlo.employeemanagementsystem;
 
-import com.joelkuvlo.sampleprojectemployee.config.EmployeeAppProperties;
+import com.joelkuvlo.employeemanagementsystem.config.EmployeeAppProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
